@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cambio por compra</title>
+</head>
+<body>
+</center>
+    <h2>supermercado el vacano</h2>
+    <h3>Vueltas/Cambio por compras</h3>
+    <script>
+        //Programa que permita capturar el nombre de un producto, su precio unitario y su cantidad, luego calcular total a pagar, muéstrelo por una mensaje de alerta al usuario, luego permita la captura del monto en efectivo pagado y validar cancelación total del monto de la factura, finalmente enviar mensaje Gracias por su compra//
+//Entrada
+producto=prompt("Ingrese nombre producto a comprar:");
+precio=parseInt(prompt("Ingrese precio producto:"));
+cantidad=parseInt(prompt("Ingrese cantidad a comprar:"));
+//Proceso
+total=cantidad*precio;
+//Salida
+alert("su valor a pagar en caja es:"+"\n"+total);
+document.write("Su valor a pagar es:.. "+total+"<br>"+"<br>");
+//pedir o validar monto a pagar
+pago=parseInt(prompt("Ingrese monto total a pagar en caja"));
+saldo=total-pago;
+//Condicional si para verificar si hay vueltas x cambio
+if (pago==total){alert("reclame su tirilla depago, Gracias Por Su Compra");}else{
+    alert("reclame su tirilla depago Y Sus Vueltas en efectivo..$"+saldo+"\n"+"Gracias Por Su Compra");
+}
+document.write("***********************************************");
+
+    </script>
+<center>
+</body>
+</html>
