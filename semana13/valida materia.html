@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin de notas std</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/incap.png" alt="" width="150" height="150" >
+        <h1>boletin de notas programacion web</h1>
+        <h2>materia pae06 javascript</h2>
+        <script>
+            let nota_STD,suma, prom;// variables para nota de std
+            suma=0;//sumador de notas
+            prom=0;//coocar nota definitiva std
+            num=1;//contador de notas
+            //entrada
+            nomb_std=prompt("ingrese nombre estudiante");
+            //proceso ciclo while
+            while (num<=3){
+                nota_STD=parseFloat(prompt("ingrese nota std: [1=desmpeño]"));
+                //acumulador o sumador de notas std
+                suma+=nota_STD;
+                //contador de notas ingresadas
+                num++;
+            
+                nota_STD=parseFloat(prompt("ingrese nota std: [2=talleres]"));
+                //acumulador o sumador de notas std
+                suma+=nota_STD;
+                //contador de notas ingresadas
+                num++;
+                nota_STD=parseFloat(prompt("ingrese nota std: [3=examenes]"));
+                //acumulador o sumador de notas std
+                suma+=nota_STD;
+                //contador de notas ingresadas
+                num++;
+            }
+            //calcular promedio
+            prom=suma/3;
+            //valida calificacion std
+            if (prom>=3.0){
+                swal("apreciado estudiante","aprobo materia pae","success");
+            }else{
+                swal("apreciado estudiante","reprobo materia pae","error");
+            }
+            //
+            document.write("<br>");
+            document.write("nota final de programacion web pae... "+prom.toFixed(2)+"<br>");
+        </script>
+    </center>
+</body>
+</html>

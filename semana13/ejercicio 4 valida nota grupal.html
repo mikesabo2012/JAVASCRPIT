@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota Grupo Pae</title>
+</head>
+<body>
+    <center>
+        <img src="./img/incap.png" alt="" height="150" width="150" >
+        <h1>valida nota grupal programacion web</h1>
+        <h2>Materia pae06 javascript</h2>
+        <script>
+            let prom=0;
+            let suma=0;
+            let num_std=1;//var contador std ingresado
+            //primer ciclo while contar 3 std
+            while (num_std<=3){
+                nom_std=prompt("ingrese nombre estudiante");
+                let num_notas=1;//var contador notas del std ingresado
+                //proceso ciclos anidados while para ingreso 3 notas de std
+                while(num_notas<=3){nota=parseFloat(prompt("Ingrese nota de programacion  [1=DESEMPEÑO,2=TALLERES, 3=EXAMENES] "));
+                suma+=nota;//sumador de notas  de std
+                num_notas++;//contador de notas std
+                    }
+                    num_std++;//contador de std ingresados                   
+            }
+            //calcular nota grupal
+            prom=suma/9;
+            //salida
+            document.write("<br>");
+            document.write("***************Boletin Notas Semestre***************");
+            document.write("promedio grupal materia pae..."+prom.toFixed(2)+"<br>");
+        </script>
+    </center>
+</body>
+</html>
